@@ -12,7 +12,7 @@
     <div class="workspace-container">
         <div class="language-switcher">
             <button class="lang-btn current-lang-display" data-lang="vi" title="Tiếng Việt">
-                <img src="/assets/images/vietnam-flag-icon.svg" alt="Vietnamese Flag" class="flag-icon">
+                <img src="./assets/images/vietnam-flag-icon.svg" alt="Vietnamese Flag" class="flag-icon">
             </button>
             <div class="lang-options">
                
@@ -23,49 +23,49 @@
         <div class="glow-border"></div>
 
        
-        <form action="">
-            <div class="workspace-box active-form" id="login-form">
-                        <div>
-                            <h2 class="translatable" data-key="login_welcomeBack">Chào mừng trở lại</h2>
-                        </div>
-                        <div class="workspace-from">
-                            <label for="login-email" class="translatable" data-key="login_emailLabel">Email</label>
-                            <input type="email" id="login-email" class="input-box translatable" data-key="ph_loginEmail" placeholder="Nhập Email của bạn" autocomplete="off" required/>
-                        </div>
-                        <div class="workspace-from">
-                            <label for="login-password" class="translatable" data-key="login_passwordLabel">Mật khẩu</label>
-                            <input type="password" id="login-password" class="input-box translatable" data-key="ph_loginPassword" placeholder="Nhập mật khẩu của bạn" autocomplete="off" required/>
-                        </div>
-                        <div class="workspace-remember-box">
-                            <input type="checkbox" id="remember-me" />
-                            <label for="remember-me" class="workspace-checkbox-label translatable" data-key="login_rememberMe">Ghi nhớ tôi</label>
-
-                            <div class="workspace-forgot">
-                                <a href="#" id="forgot-password-link" class="sign-in-link translatable" data-key="login_forgotPassword">Quên mật khẩu?</a>
-                            </div>
-                        </div>
-                        <button class="button translatable" id="login-button" type="submit" data-key="login_button">Đăng nhập</button>
-                        <p class="message-text" id="login-message"></p>
-                        <p class="register-text">
-                            <span class="translatable" data-key="login_noAccount">Chưa có tài khoản?</span>
-                            <a href="#" id="register-link" class="sign-in-link translatable" data-key="login_registerLink">Đăng ký</a>
-                        </p>
-                        <div class="workspace-social">
-                            <p class="workspace-social-icon">
-                                <a href="#">
-                                    <img src="/assets/images/google.svg" alt="google icon" class="workspace-social-img">
-                                </a>
-                                <a href="#">
-                                    <img src="/assets/images/facebook.svg" alt="facebook icon" class="workspace-social-img">
-                                </a>
-                                <a href="#"><img src="/assets/images/linkedin.svg" alt="linkedin icon" class="workspace-social-img"></a>
-                            </p>
-                        </div>
+        
+        <div class="workspace-box active-form" id="login-form">
+            <div>
+                <h2 class="translatable" data-key="login_welcomeBack">Chào mừng trở lại</h2>
             </div>
-        </form>
+            <div class="workspace-from">
+                <label for="login-email" class="translatable" data-key="login_emailLabel">Email</label>
+                <input type="email" id="login-email" class="input-box translatable" data-key="ph_loginEmail" placeholder="Nhập Email của bạn" autocomplete="off" required/>
+            </div>
+            <div class="workspace-from">
+                <label for="login-password" class="translatable" data-key="login_passwordLabel">Mật khẩu</label>
+                <input type="password" id="login-password" class="input-box translatable" data-key="ph_loginPassword" placeholder="Nhập mật khẩu của bạn" autocomplete="off" required/>
+            </div>
+            <div class="workspace-remember-box">
+                <input type="checkbox" id="remember-me" />
+                <label for="remember-me" class="workspace-checkbox-label translatable" data-key="login_rememberMe">Ghi nhớ tôi</label>
 
-        <form action="">
-            <div class="form-register" id="register-form">
+                <div class="workspace-forgot">
+                    <a href="#" id="forgot-password-link" class="sign-in-link translatable" data-key="login_forgotPassword">Quên mật khẩu?</a>
+                </div>
+            </div>
+            <button class="button translatable" id="login-button" type="submit" data-key="login_button">Đăng nhập</button>
+            <p class="message-text" id="login-message"></p>
+            <p class="register-text">
+                <span class="translatable" data-key="login_noAccount">Chưa có tài khoản?</span>
+                <a href="#" id="register-link" class="sign-in-link translatable" data-key="login_registerLink">Đăng ký</a>
+            </p>
+            <div class="workspace-social">
+                <p class="workspace-social-icon">
+                    <a href="#">
+                        <img src="/assets/images/google.svg" alt="google icon" class="workspace-social-img">
+                    </a>
+                    <a href="#">
+                        <img src="/assets/images/facebook.svg" alt="facebook icon" class="workspace-social-img">
+                    </a>
+                    <a href="#"><img src="/assets/images/linkedin.svg" alt="linkedin icon" class="workspace-social-img"></a>
+                </p>
+            </div>
+        </div>
+        
+
+        
+        <div class="form-register" id="register-form">
             <div>
                 <h2 class="translatable" data-key="register_createAccount">Tạo tài khoản của bạn</h2>
             </div>
@@ -106,11 +106,11 @@
                 <span class="translatable" data-key="register_haveAccount">Đã có tài khoản?</span>
                 <a href="#" id="login-link-from-register" class="sign-in-link translatable" data-key="register_loginLink">Đăng nhập</a>
             </p>
-            </div>
-        </form>
+        </div>
+    
 
-        <form action="">
-            <div class="form-forgot" id="forgot-form">
+    
+        <div class="form-forgot" id="forgot-form">
             <div>
                 <h2 class="translatable" data-key="forgot_forgotAccount">Quên tài khoản</h2>
             </div>
@@ -126,12 +126,12 @@
             <div>
                 <button class="form-btn translatable" id="reset-password-button" type="submit" data-key="forgot_resetPassword">Đặt lại mật khẩu</button>
             </div>
-            </div>
-        </form>
+        </div>
+    
 
         
     </div>
 
-    <script src="/assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
