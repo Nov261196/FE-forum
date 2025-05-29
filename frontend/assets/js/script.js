@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             loginMessage.textContent = ''; // Xóa thông báo cũ
 
             try {
-                const response = await fetch('http://be-forum-production.up.railway.app/api/login', {
+                const response = await fetch('https://be-forum-production.up.railway.app/api/login', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email, password }),
@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             try {
-                const response = await fetch('http://be-forum-production.up.railway.app/api/register', {
+                const response = await fetch('https://be-forum-production.up.railway.app/api/register', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username, email, password }),
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
             forgotMessage.textContent = '';
 
             try {
-                const response = await fetch('http://be-forum-production.up.railway.app/api/forgot-password', {
+                const response = await fetch('https://be-forum-production.up.railway.app/api/forgot-password', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email }),
