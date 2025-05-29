@@ -370,4 +370,106 @@ body {
 }
 
 
-/* DASHBOARD FORM */
+/* Language Switcher - Cái "1 ô" tổng thể ở góc trên bên phải */
+
+.language-switcher {
+    position: absolute; /* Đặt tuyệt đối so với .workspace-container */
+    top: 32px; /* Cách mép trên 20px */
+    right: 20px; /* Cách mép phải 20px */
+    z-index: 100; /* Đảm bảo nó nằm trên các phần tử khác */
+    display: inline-block; /* Để nó chỉ chiếm không gian cần thiết */
+    cursor: pointer;
+    text-align: center; /* Căn giữa nội dung bên trong */
+    user-select: none; /* tránh bôi đen khi click */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển động mượt khi hover */
+}
+/* Icon cờ hiển thị ban đầu (cái "1 ô") */
+.current-lang-display {
+
+    width: 38px; /* Kích thước cờ ban đầu */
+    height: 38px;
+    border-radius: 8px; /* Bo tròn */
+    overflow: hidden; /* Đảm bảo ảnh cờ bo tròn */
+    display: flex; /* Để căn giữa ảnh cờ bên trong */
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease; /* Hiệu ứng chuyển động mượt */
+}
+
+.current-lang-display:hover {
+      box-shadow: 0 0 8px 2px rgba(226, 233, 229, 0.904); /* glow xanh dương nhạt */
+
+}
+
+/* Container chứa các tùy chọn ngôn ngữ (dropdown) */
+.lang-options {
+    display: none; /* Ban đầu ẩn */
+    position: absolute; /* Đặt tuyệt đối so với .language-switcher */
+    top: 100%; /* Đặt ngay dưới .current-lang-display */
+    left: -10px; /* Căn phải với .current-lang-display */
+    margin-top: 5px; /* Khoảng cách giữa cờ ban đầu và dropdown */
+    background-color: rgba(255, 255, 255, 0.08); /* Nền mờ cho dropdown */
+    backdrop-filter: blur(8px); /* Hiệu ứng làm mờ nền phía sau */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); /* Bóng đổ mạnh hơn */
+    padding: 8px;
+    flex-direction: column; /* Hiển thị các nút theo chiều dọc */
+    gap: 8px; /* Khoảng cách giữa các nút cờ */
+    opacity: 0; /* Để tạo hiệu ứng fade-in */
+    visibility: hidden; /* Để đảm bảo không thể click khi ẩn */
+    transform: translateY(-10px); /* Bắt đầu từ trên, trượt xuống */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    min-width: 60px; /* Đảm bảo đủ rộng cho các cờ */
+    align-items: center; /* Căn giữa các cờ trong dropdown */
+}
+
+/* Hiển thị .lang-options khi di chuột vào .language-switcher */
+.language-switcher:hover .lang-options {
+    display: flex; /* Hiển thị lại (thành dạng cột) */
+    opacity: 1; /* Fade-in */
+    visibility: visible; /* Có thể click */
+    transform: translateY(0); /* Trượt vào vị trí */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+
+}
+
+/* Định kiểu cho các nút cờ bên trong dropdown */
+.language-switcher .lang-btn {
+    padding: 0;
+    border: none; /* Loại bỏ hoàn toàn viền */
+    background-color: transparent; /* Loại bỏ hoàn toàn nền */
+    cursor: pointer;
+    border-radius: 8px; /* Làm cho cờ bo tròn */
+    width: 40px; /* Kích thước nút cờ */
+    height: 30px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.language-switcher .lang-btn:hover {
+    transform: scale(1.1); /* Phóng to nhẹ khi di chuột */
+}
+
+.language-switcher .lang-btn.active {
+    transform: scale(1); /* Đảm bảo không phóng to khi active */
+}
+
+/* Định kiểu cho icon cờ bên trong các nút */
+.language-switcher .flag-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Đảm bảo hình ảnh cờ bo tròn */
+    border: none; /* Loại bỏ viền của cờ */
+
+}
+
+/* END Language Switcher */
+
+
+
+
